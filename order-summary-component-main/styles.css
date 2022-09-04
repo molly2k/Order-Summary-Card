@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+ --very-pale-blue: hsl(225, 100%, 98%);
+ --desaturated-blue: hsl(224, 23%, 55%);
+ --dark-blue: hsl(223, 47%, 23%);
+
+ --pale-blue: hsl(225, 100%, 94%);
+ --bright-blue: hsl(245, 75%, 52%);
+ --bright-blue-hover: hsl(245, 67%, 62%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url('./images/pattern-background-desktop.svg');
+    height: 100%;
+    width: 100vw;
+    background-repeat: repeat-x;
+    background-color: var(--pale-blue);
+    font-size: 16px;
+    
+}
+
+.order-card {
+    margin: 80px auto;
+    display: block;
+    width: 450px;
+    height: auto;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 5px 13px 53px -42px rgba(66, 68, 90, 1);
+    
+}
+
+.order-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-ilustration img {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.order-title {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 30px auto;
+    margin-bottom: 20px;
+}
+
+.summary-description {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(143, 143, 143);
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.current-plan {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: var(--very-pale-blue);
+}
+
+.plan-details {
+    display: block;
+    margin-right: 110px;
+}
+
+.plan-img {
+    height: 100%;
+    
+    margin-right: 15px;
+}
+
+.change {
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.plan-img img {
+    margin-top: 5px;
+    width: 42px;
+    height: 42px;
+}
+
+.current-plan a {
+    font-size: 14px;
+}
+
+.plan-cost {
+    color: rgb(143, 143, 143);
+}
+
+.proceed-btn {
+    width: 80%;
+    margin: 0 auto;
+    height: 45px;
+    background: var(--bright-blue);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 25px;
+    cursor: pointer;
+    box-shadow: 0px 10px 45px -15px rgba(66, 68, 90, 1);
+    transition: all 0.2s ease-in-out;
+}
+
+.proceed-btn span {
+    font-size: 13px;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+.proceed-btn:hover {
+    background: var(--bright-blue-hover);
+}
+
+.cancel-btn {
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    margin-bottom: 50px;
+    cursor: pointer;
+
+}
+
+.cancel-btn:hover span {
+    color: var(--dark-blue);
+}
+
+.cancel-btn span {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(143, 143, 143);
+    transition: all 0.2s ease-in-out;
+}
+
+.change:hover {
+    text-decoration: none;
+    color: var(--bright-blue-hover);
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+
+    .order-card {
+        width: 70%;
+    }
+
+    .main-ilustration img {
+        width: 100%;
+    }
+
+    .plan-details {
+        margin-right: 45px;
+    }
+
+    .order-title {
+        font-size: 25px;
+    }
+
+    .summary-description {
+        width: 70%;
+    }
+
+    .proceed-btn span {
+        font-size: 15px;
+    }
+
+}
